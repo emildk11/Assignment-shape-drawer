@@ -11,8 +11,9 @@ import javafx.scene.paint.Color;
 /**
  *
  * @author MrEss
- */
+**/
 public class Draw {
+
     public void draw (int x, int y, GraphicsContext context) {
         context.setFill(Color.BLACK);
         context.setStroke(Color.BLACK);
@@ -23,5 +24,5 @@ public class Draw {
         
         context.beginPath();
         context.strokePolygon(xPoints, yPoints, 3);
-    }
+}
 }
