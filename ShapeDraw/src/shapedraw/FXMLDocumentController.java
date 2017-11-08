@@ -29,7 +29,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button button;
     @FXML
-    private Canvas canvas;
+    public Canvas canvas;
     Draw draw = new Draw();
     @FXML
     private ListView<?> list1;
@@ -43,7 +43,7 @@ public class FXMLDocumentController implements Initializable {
     private MenuButton canvType;
     @FXML
     private void handleButtonAction(ActionEvent event) {
-    draw.draw(50, 50, canvas.getGraphicsContext2D());
+    draw.drawCircle(50, 50, canvas.getGraphicsContext2D());
     }
     
     @Override
