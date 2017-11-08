@@ -13,6 +13,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
 
 
 /**
@@ -28,6 +31,16 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Canvas canvas;
     Draw draw = new Draw();
+    @FXML
+    private ListView<?> list1;
+    @FXML
+    private MenuButton selectShape;
+    @FXML
+    private TextField txtSize;
+    @FXML
+    private Button addSize;
+    @FXML
+    private MenuButton canvType;
     @FXML
     private void handleButtonAction(ActionEvent event) {
     draw.draw(50, 50, canvas.getGraphicsContext2D());
