@@ -15,8 +15,9 @@
         <Label fx:id="label" layoutX="23.0" layoutY="366.0" minHeight="16" minWidth="69" text="Size" />
       <MenuButton fx:id="selectShape" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" text="Select Shape">
         <items>
-          <MenuItem mnemonicParsing="false" text="Triangle" />
-          <MenuItem mnemonicParsing="false" text="Circle" />
+          <MenuItem fx:id="selectTriangle" mnemonicParsing="false" onAction="#handleSelectTriangleAction" text="Triangle" />
+          <MenuItem fx:id="selectCircle" mnemonicParsing="false" onAction="#handleSelectCircleAction" text="Circle" />
+            <MenuItem fx:id="selectRectangle" mnemonicParsing="false" onAction="#handleSelectRectangleAction" text="Rectangle" />
         </items>
       </MenuButton>
       <TextField fx:id="txtSize" layoutX="23.0" layoutY="383.0" prefHeight="25.0" prefWidth="69.0" />

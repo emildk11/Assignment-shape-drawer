@@ -8,6 +8,7 @@ package shapedraw;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -15,6 +16,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 
@@ -42,6 +44,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private MenuButton canvType;
     @FXML
+    private MenuItem selectTriangle;
+    @FXML
+    private MenuItem selectCircle;
+    @FXML
+    private MenuItem selectRectangle;
+    @FXML
     private void handleButtonAction(ActionEvent event) {
     draw.drawCircle(50, 50, canvas.getGraphicsContext2D());
     }
@@ -51,4 +59,22 @@ public class FXMLDocumentController implements Initializable {
         
         
     } 
-}
+
+    @FXML
+    private void handleSelectTriangleAction(ActionEvent event) {
+        selectShape.setText("Triangle");
+    }
+
+    @FXML
+    private void handleSelectCircleAction(ActionEvent event) {
+        selectShape.setText("Circle");
+    }
+
+    @FXML
+    private void handleSelectRectangleAction(ActionEvent event) {
+        selectShape.setText("Rectangle");
+    }
+
+  
+            
+    }
