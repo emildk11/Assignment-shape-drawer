@@ -19,7 +19,8 @@ public class Draw {
         context.setFill(Color.BLACK);
         context.setStroke(Color.BLACK);
         context.setLineWidth(2);
-        context.scale(3, 3);
+        context.scale(0.5, 0.5);
+        
     }
 
 }

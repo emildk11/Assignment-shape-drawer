@@ -54,6 +54,7 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
     draw.draw(canvas.getGraphicsContext2D());
     triangle.triangle(50, 50, canvas.getGraphicsContext2D());
+    triangle.circle(75, 75, canvas.getGraphicsContext2D());
     }
     
     @Override
