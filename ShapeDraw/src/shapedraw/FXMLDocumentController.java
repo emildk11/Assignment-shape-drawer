@@ -33,6 +33,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public Canvas canvas;
     Draw draw = new Draw();
+    Shapes triangle = new Shapes();
     @FXML
     private ListView<?> list1;
     @FXML
@@ -51,7 +52,8 @@ public class FXMLDocumentController implements Initializable {
     private MenuItem selectRectangle;
     @FXML
     private void handleButtonAction(ActionEvent event) {
-    draw.drawCircle(50, 50, canvas.getGraphicsContext2D());
+    draw.draw(canvas.getGraphicsContext2D());
+    triangle.triangle(50, 50, canvas.getGraphicsContext2D());
     }
     
     @Override
