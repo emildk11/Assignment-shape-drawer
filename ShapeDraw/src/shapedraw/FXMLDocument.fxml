@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shapedraw.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shapedraw.FXMLDocumentController">
     <children>
         <Button fx:id="button" layoutX="521.0" layoutY="455.0" onAction="#handleButtonAction" text="Click Me!" />
         <Label fx:id="label" layoutX="23.0" layoutY="366.0" minHeight="16" minWidth="69" text="Size" />
@@ -21,7 +21,7 @@
         </items>
       </MenuButton>
       <TextField fx:id="txtSize" layoutX="23.0" layoutY="383.0" prefHeight="25.0" prefWidth="69.0" />
-      <Button fx:id="addSize" layoutX="23.0" layoutY="414.0" mnemonicParsing="false" text="Add -&gt;" />
+      <Button fx:id="addSize" layoutX="23.0" layoutY="414.0" mnemonicParsing="false" onAction="#handleAddButton" text="Add -&gt;" />
       <ListView fx:id="list1" layoutX="128.0" layoutY="57.0" prefHeight="382.0" prefWidth="144.0" />
       <MenuButton fx:id="canvType" layoutX="320.0" layoutY="455.0" mnemonicParsing="false" text="Canvas Type">
         <items>

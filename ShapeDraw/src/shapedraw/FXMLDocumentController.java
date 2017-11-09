@@ -33,9 +33,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public Canvas canvas;
     Draw draw = new Draw();
-    Shapes triangle = new Shapes();
     @FXML
-    private ListView<?> list1;
+    private ListView<String> list1;
     @FXML
     private MenuButton selectShape;
     @FXML
@@ -50,34 +49,57 @@ public class FXMLDocumentController implements Initializable {
     private MenuItem selectCircle;
     @FXML
     private MenuItem selectRectangle;
+    
     @FXML
     private void handleButtonAction(ActionEvent event) {
-    draw.draw(canvas.getGraphicsContext2D());
-    triangle.triangle(50, 50, canvas.getGraphicsContext2D());
-    triangle.circle(75, 75, canvas.getGraphicsContext2D());
+    draw.drawCircle(50, 50, canvas.getGraphicsContext2D());
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        
+       
+       
     } 
 
     @FXML
     private void handleSelectTriangleAction(ActionEvent event) {
         selectShape.setText("Triangle");
+        marin=1;
     }
 
     @FXML
     private void handleSelectCircleAction(ActionEvent event) {
         selectShape.setText("Circle");
+        marin=2;
     }
 
     @FXML
     private void handleSelectRectangleAction(ActionEvent event) {
         selectShape.setText("Rectangle");
+        marin=3;
     }
-
-  
-            
+private int marin=0;
+    @FXML
+    private void handleAddButton(ActionEvent event) {
+        addToList();
+    }
+    private void addToList()
+    {
+        switch(marin)
+        {
+            case 1:
+            list1.getItems().add("Triangle"+"    "+Integer.parseInt(txtSize.getText()));
+            break;
+            case 2:
+            list1.getItems().add("Circle"+"    "+Integer.parseInt(txtSize.getText()));
+            break;
+            case 3:
+            list1.getItems().add("Rectangle"+"    "+Integer.parseInt(txtSize.getText()));
+            break;
+        }
+       
+    }
+    
+    
+          
     }
