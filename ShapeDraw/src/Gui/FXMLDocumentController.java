@@ -46,8 +46,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button addSize;
     @FXML
-    private ComboBox<String> setPattern; 
+    private ComboBox<String> setPattern;  
+
     @Override
+
     public void initialize(URL url, ResourceBundle rb) 
     {  
         selectShape.getItems().addAll("Triangle", "Circle", "Rectangle");
@@ -56,7 +58,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void drawShapes(ActionEvent event)
     {
-        GraphicsContext gc = canvas.getGraphicsContext2D();
+        GraphicsContext context = canvas.getGraphicsContext2D();
         for (String item : list1.getItems()) 
         {
             int x = 0;
@@ -110,44 +112,22 @@ public class FXMLDocumentController implements Initializable {
             }
             if(shape.equals("Circle")) 
             {
-                draw.drawCircle(x, y, gc);
+                draw.drawCircle(x, y, context, size);
             }
             if(shape.equals("Triangle")) 
             {
-                draw.drawTriangle(x, y, gc);
+                draw.drawTriangle (x, y, context, size);
             }
             if(shape.equals("Rectangle")) 
             {
-                draw.drawRectangle(x, y, gc);
+                draw.drawRectangle(x, y, context, size);
             }
         }
             
             
         
     }
-    /*@FXML
-    private void handleSelectTriangleAction(ActionEvent event) 
-    {
-        selectShape.setText("Triangle");
-        marin=1;
-    }
-    @FXML
-    private void handleSelectCircleAction(ActionEvent event) 
-    {
-        selectShape.setText("Circle");
-        marin=2;
-    }
-    @FXML
-    private void handleSelectRectangleAction(ActionEvent event) 
-    {
-        selectShape.setText("Rectangle");
-        marin=3;
-    }
-    private void handleAddButton(ActionEvent event) 
-    {
-        AddToList();
-    }*/
-    @FXML
+@FXML
     public void AddToList(ActionEvent event)
     {
         String shape = selectShape.getSelectionModel().getSelectedItem();
@@ -156,10 +136,12 @@ public class FXMLDocumentController implements Initializable {
         
     }
    
-@FXML
+    @FXML
     private void clearCanvas(ActionEvent event) 
     {
         canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         list1.getItems().clear();
     }
+    
 }
+
