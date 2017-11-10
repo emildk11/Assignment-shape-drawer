@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shapedraw;
+package bll;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
@@ -12,6 +14,9 @@ import javafx.scene.paint.Color;
  *
  * @author MrEss
 **/
+
+
+
 public class Draw {
 
     public void drawTriangle (int x, int y, GraphicsContext context) 
@@ -40,4 +45,8 @@ public class Draw {
         context.strokeRect(x,y,x+50,y+50);
     
     }
+    
+    
+    
+    
 }
