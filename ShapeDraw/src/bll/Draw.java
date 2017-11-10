@@ -27,8 +27,8 @@ public class Draw
         context.setStroke(Color.BLACK);
         context.setLineWidth(1);
         
-        double[] xPoints = {x, size, size};
-        double[] yPoints = {y, size,size};
+        double[] xPoints = {x, x+size, x-size};
+        double[] yPoints = {y, y+size,y+size};
         
         context.beginPath();
         context.strokePolygon(xPoints, yPoints, 3);

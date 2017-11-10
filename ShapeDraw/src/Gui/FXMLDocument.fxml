@@ -15,7 +15,7 @@
       <TextField fx:id="txtSize" layoutX="16.0" layoutY="118.0" prefHeight="25.0" prefWidth="69.0" />
       <Button fx:id="addSize" layoutX="23.0" layoutY="152.0" mnemonicParsing="false" onAction="#AddToList" text="Add -&gt;" />
       <ListView fx:id="list1" layoutX="128.0" layoutY="57.0" prefHeight="500.0" prefWidth="144.0" />
-      <Canvas id="canvas" fx:id="canvas" height="524.0" layoutX="275.0" layoutY="61.0" width="725.0" />
+      <Canvas id="canvas" fx:id="canvas" height="523.0" layoutX="313.0" layoutY="58.0" width="731.0" />
       <ComboBox fx:id="setPattern" layoutX="200.0" layoutY="604.0" prefHeight="34.0" prefWidth="129.0" promptText="Select Pattern" />
       <ComboBox fx:id="selectShape" layoutX="3.0" layoutY="45.0" prefHeight="25.0" prefWidth="116.0" promptText="Select Shape" />
       <Button fx:id="clearButton" layoutX="898.0" layoutY="609.0" mnemonicParsing="false" onAction="#clearCanvas" prefHeight="34.0" prefWidth="92.0" text="Clear!" />
